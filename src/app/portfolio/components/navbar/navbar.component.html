@@ -19,7 +19,12 @@
         </ul>
       </div>
         <a class="h-16 px-4">
-            <img src="/assets/images/knlogo.png" alt="logo" class="h-full">
+            @if(currentTheme === 'light' || ''){
+                <img src="/assets/images/knlogodark.png" alt="logo" class="h-full">
+            } 
+            @else if(currentTheme === 'dark'){
+                <img src="/assets/images/knlogolight.png" alt="logo" class="h-full">
+            }
         </a>
     </div>
     <div class="navbar-center hidden lg:flex">

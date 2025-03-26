@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../../shared/services/theme.service';
 
 @Component({
@@ -8,16 +8,19 @@ import { ThemeService } from '../../../shared/services/theme.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
 
-   changeThemeButton = document.getElementById('changeThemeButton');
-   app = document.getElementById('daisyTheme');
+    public currentTheme: string | null = '';
 
-   constructor(private themeService: ThemeService){};
+   constructor(private themeService: ThemeService){}
+   
+   ngOnInit(): void {
+    this.currentTheme = 'light';
+   };
 
    changeTheme(){
-    const currentTheme = document.body.getAttribute('data-theme');
-    const newTheme = currentTheme == 'light'? 'dark' : 'light';
+    this.currentTheme = document.body.getAttribute('data-theme');
+    const newTheme = this.currentTheme == 'light'? 'dark' : 'light';
     this.themeService.setTheme(newTheme);
    }
 
