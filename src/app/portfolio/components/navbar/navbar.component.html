@@ -7,18 +7,19 @@
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Item 1</a></li>
+          <li><a routerLink="/about">Acerca de</a></li>
           <li>
-            <a>Parent</a>
+            <a>Portafolio</a>
             <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
+              <li><a routerLink="/portfolio/development">Desarrollo</a></li>
+              <li><a routerLink="/portfolio/qa">QA</a></li>
+              <li><a routerLink="/portfolio/ux-ui">UX/UI</a></li>
             </ul>
           </li>
-          <li><a>Item 3</a></li>
+          <li><a routerLink="/contact">Contáctame</a></li>
         </ul>
       </div>
-        <a class="h-16 px-4">
+        <a class="h-16 px-4" routerLink="/">
             @if(currentTheme === 'light' || ''){
                 <img src="/assets/images/knlogodark.png" alt="logo" class="h-full">
             } 
@@ -29,17 +30,18 @@
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
+        <li><a routerLink="/about">Acerca de</a></li>
         <li>
           <details>
-            <summary>Parent</summary>
+            <summary>Portafolio</summary>
             <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
+              <li><a routerLink="/portfolio/development">Desarrollo</a></li>
+              <li><a routerLink="/portfolio/qa">QA</a></li>
+              <li><a routerLink="/portfolio/ux-ui">UX/UI</a></li>
             </ul>
           </details>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a routerLink="/contact">Contáctame</a></li>
       </ul>
     </div>
     <div class="navbar-end px-4">

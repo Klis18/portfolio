@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../../shared/services/theme.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'portfolio-navbar',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

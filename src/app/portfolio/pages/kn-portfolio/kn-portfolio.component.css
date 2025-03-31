@@ -1,0 +1,17 @@
+.backgroundTheme{
+    /* background-image: url('https://media.istockphoto.com/id/1797768581/es/foto/efecto-de-luz-de-ne%C3%B3n-3d-con-fondo-negro-brillante.jpg?s=612x612&w=0&k=20&c=qxZp__DO8Cf1sF-HZWCuvWJelAZJ1CLlLN7sK137XK0='); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/gradiente-onda-rosa-fondo-diseno-abstracto_343694-4182.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/fondo-degradado-rosa-fuerte_52683-139821.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/fondo-degradado-rosa-disenos-modernos_343694-2073.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/fondo-moderno-pink-wave-gradiente_343694-2076.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/gradiente-onda-rosa-fondo-diseno-abstracto_343694-4156.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/fondo-degradado-rosa-disenos-modernos_343694-2058.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/disenos-modernos-fondo-rosa-degradado_343694-2041.jpg?ga=GA1.1.121685742.1720130301&semt=ais_hybrid'); */
+    /* background-image: url('https://img.freepik.com/vector-gratis/diseno-fondo-onda-abstracta-rosa-degradado_343694-3747.jpg?ga=GA1.1.121685742.1720130301'); */
+    background-image: url('/assets/images/background5.png');
+    background-size: cover;
+}
+
+.box-background{
+    background-color: rgba(58, 56, 58, 0.9);
+}
