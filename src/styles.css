@@ -4,6 +4,15 @@
   themes: light --default, dark --preferslight;
 };
 
+.box-titles{
+  background-color: #c05b87;
+}
+
+.list-styles{
+  list-style-type: square;
+  padding-left: 5px;
+}
+
 .raleway-regular {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
