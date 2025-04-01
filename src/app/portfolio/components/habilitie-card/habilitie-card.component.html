@@ -1,0 +1,12 @@
+<div class="rounded-lg h-full shadow-lg">
+    <div class="box-titles text-white text-center py-2 text-xl montserrat-alternates-bold rounded-t-lg">
+        <p>{{habilitieData().title}}</p>
+    </div>
+    <div class="py-4 px-8 poppins-light">
+        <ul class="list-styles">
+            @for(habilitieItem of habilitieData().habilities; track habilitieData()){
+                <li>{{habilitieItem}}</li>
+            }
+        </ul>
+    </div>
+</div>
