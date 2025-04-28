@@ -8,6 +8,15 @@
   background-color: #c05b87;
 }
 
+.box-secondary{
+  background-color: #cc6e96;
+}
+
+.box-dark-color{
+  background-color: #b4537d;
+
+}
+
 .list-styles{
   list-style-type: square;
   padding-left: 5px;
