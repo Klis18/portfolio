@@ -18,7 +18,8 @@ export class HabilitiesSectionComponent {
       title: 'Desarrollo',
       habilities: [
         'Desarrollo de Front-End mediante el uso de HTML, CSS, Angular,Bootstrap, Tailwind.',
-        'Conocimientos básicos en: Java, SQL Server.'
+        'Desarrollo de API REST con ASP.NET Core.',
+        'Conocimientos básicos en: Java, JavaScript, C# y SQL Server.'
       ]
     },
     {
