@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToolHabilitie } from '../interfaces/tool-habilitie.interface';
+import { WorkExperience } from '../interfaces/work-experience.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -134,29 +135,26 @@ export class AboutService {
       image: 'canva.jpg'
     }
   ]
+
+  public workExperienceList: WorkExperience[] = [
+    {
+      image: 'viamatica.jpg',
+      enterprise: 'Viamatica',
+      period: 'Junio 2023 - Febrero 2024',
+      tasks: [
+        'Elaboración y Actualización de Manuales de Usuario.',
+        'Elaboración y Creación de Documentación Técnica.',
+        'Realización de pruebas manuales funcionales.'
+      ]
+    }
+  ]
   constructor() { }
-
-  getProgrammingLanguages(): ToolHabilitie[]{
-    return this.toolsList.filter(x => x.type == 'programming-language');
-  }
-
-  getToolsDevList(){
-    return this.toolsList.filter(x => x.type == 'dev');
-  }
-
-  getToolsQA(){
-    return this.toolsList.filter(x => x.type == 'qa');
-  }
-
-  getToolsUxDesign(){
-    return this.toolsList.filter(x => x.type == 'ux');
-  }
-
-  getOtherTools(){
-    return this.toolsList.filter(x => x.type == 'others');
-  }
 
   getToolFilterList(filter: string): ToolHabilitie[]{
     return this.toolsList.filter(x => x.type == filter);
+  }
+
+  getWorkExperience(): WorkExperience[]{
+    return this.workExperienceList;
   }
 }

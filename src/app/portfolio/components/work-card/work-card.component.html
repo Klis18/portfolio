@@ -1,0 +1,15 @@
+
+<div class="grid grid-cols-4 gap-5 bg-base-100 rounded-lg p-2 background-pink-transparent shadow-lg">
+    <div class="flex items-center justify-center">
+        <img src="./assets/images/{{workExperience().image}}" alt="angular" class="w-32 rounded-full">
+    </div>
+    <div class="col-span-3 py-4">
+        <p class="text-xl font-medium">{{workExperience().enterprise}}</p>
+        <p class="mb-2">{{workExperience().period}}</p>
+        <ul class="pl-2">
+            @for(task of workExperience().tasks; track task){
+                <li class="list-styles">{{task}}</li>
+            }
+        </ul>
+    </div>
+</div>

@@ -10,10 +10,6 @@ import { CommonModule } from '@angular/common';
   ],
   templateUrl: './tool-item.component.html',
   styles: `
-    .background-pink-transparent{
-      background-color: rgba(149, 85, 113, 0.2);
-    }
-
     .progress-background{
       background-color: rgba(226, 169, 194, 0.4);
     }

@@ -16,6 +16,11 @@
 
 }
 
+ .background-pink-transparent{
+      background-color: rgba(149, 85, 113, 0.2);
+  }
+
+
 .list-styles{
   list-style-type: square;
   padding-left: 5px;
@@ -161,7 +166,7 @@
   font-style: normal;
 }
 
-.poppins-extralight, p {
+.poppins-extralight, p, li {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
