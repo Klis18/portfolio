@@ -1,41 +1,32 @@
-import { Component } from '@angular/core';
-import { Habilitie } from '../../interfaces/habilitie.interface';
-import { HabilitieCardComponent } from '../habilitie-card/habilitie-card.component';
+import { Component, OnInit } from '@angular/core';
+import { ToolHabilitie } from '../../interfaces/tool-habilitie.interface';
+import { AboutService } from '../../services/about.service';
+import { HabilitiesSubsectionComponent } from '../habilities-subsection/habilities-subsection.component';
 
 @Component({
   selector: 'portfolio-habilities-section',
   standalone: true,
   imports: [
-    HabilitieCardComponent
+    HabilitiesSubsectionComponent,
   ],
   templateUrl: './habilities-section.component.html',
   styles: ``
 })
-export class HabilitiesSectionComponent {
+export class HabilitiesSectionComponent implements OnInit{
+  
+  languageProgrammingList: ToolHabilitie[] = [];
+  devToolsList: ToolHabilitie[] = [];
+  qaToolsList:  ToolHabilitie[] = [];
+  uxToolsList:  ToolHabilitie[] = [];
+  othersTools:  ToolHabilitie[] = [];
 
-  habilitiesList: Habilitie[] = [
-    {
-      title: 'Desarrollo',
-      habilities: [
-        'Desarrollo de Front-End mediante el uso de HTML, CSS, Angular,Bootstrap, Tailwind.',
-        'Desarrollo de API REST con ASP.NET Core.',
-        'Conocimientos básicos en: Java, JavaScript, C# y SQL Server.'
-      ]
-    },
-    {
-      title: 'QA Automation',
-      habilities: [
-        'Creación y actualización de plan de pruebas',
-        'Conocimientos básicos en herramientas de testing como Selenium, JMeter y Postman'
-      ]
-    },
-    {
-      title: 'UX/UI',
-      habilities: [
-        ' Creación de prototipos mediante el uso de Figma y Adobe XD.',
-        ' Realización de test de usabilidad en prototipos mediante el uso de la herramienta Maze.'
-      ]
-    }
-  ]
+  constructor(private aboutService: AboutService){};
 
+  ngOnInit(): void {
+    this.languageProgrammingList = this.aboutService.getToolFilterList('programming-language');
+    this.devToolsList = this.aboutService.getToolFilterList('dev');
+    this.qaToolsList  = this.aboutService.getToolFilterList('qa');
+    this.uxToolsList  = this.aboutService.getToolFilterList('ux');
+    this.othersTools  = this.aboutService.getToolFilterList('others');
+  }
 }

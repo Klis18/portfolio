@@ -1,13 +1,16 @@
 <div class="flex items-center justify-center space-x-4 pb-12">
     <hr class="flex-grow border-t-2 border-gray-300">
-    <span class="text-xl md:text-2xl lg:text-2xl xl:md:text-2xl montserrat-alternates-bold text-white">Mis Habilidades y Herramientas</span>
+    <span class="text-xl md:text-2xl lg:text-2xl xl:md:text-2xl montserrat-alternates-bold">Herramientas y Frameworks</span>
     <hr class="flex-grow border-t-2 border-gray-300">
 </div>
-<div class="grid grid-cols-3 gap-5 md:gap-12 lg:gap-12 xl:gap-12 h-1/3">
 
-    @for(habilitie of habilitiesList; track habilitie){
-        <div class="col-span-3 md:col-span-1 lg:col-span-1 xl:col-span-1">
-            <portfolio-habilitie-card [habilitieData]="habilitie"></portfolio-habilitie-card>
-        </div>
-    }
-</div>
+<app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+
+<app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
+
+<app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
+
+<app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
+
+<app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+

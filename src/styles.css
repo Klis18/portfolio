@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
-@plugin "daisyui"{
-  themes: light --default, dark --preferslight;
-};
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .box-titles{
   background-color: #c05b87;
@@ -22,7 +21,15 @@
   padding-left: 5px;
 }
 
-.raleway-regular {
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.raleway-regular, h3 {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -148,13 +155,13 @@
 }
 
 /*-------------------POPPINS--------------------------------*/
-.poppins-thin {
+.poppins-thin{
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
-.poppins-extralight {
+.poppins-extralight, p {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -255,3 +262,6 @@
   font-weight: 900;
   font-style: italic;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
