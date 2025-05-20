@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ToolHabilitie } from '../../interfaces/tool-habilitie.interface';
 import { AboutService } from '../../services/about.service';
 import { HabilitiesSubsectionComponent } from '../habilities-subsection/habilities-subsection.component';
+import { TitlesComponent } from '../../../shared/components/titles/titles.component';
 
 @Component({
   selector: 'portfolio-habilities-section',
   standalone: true,
   imports: [
     HabilitiesSubsectionComponent,
+    TitlesComponent
   ],
   templateUrl: './habilities-section.component.html',
   styles: ``
