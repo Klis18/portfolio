@@ -39,7 +39,7 @@ export class AboutService {
     {
       tool: 'React',
       percentKnoledge: '10%',
-      level: 'básico',
+      level: 'bajo',
       type: 'dev',
       image: 'react.png'
     },

@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center space-x-4 pb-12">
+<!-- <div class="flex items-center justify-center space-x-4 pb-12">
     <div class="rounded-full box-titles size-12 flex items-center justify-center">
         <span class="material-symbols-outlined text-4xl text-fuchsia-100">
             {{iconName()}}
@@ -13,4 +13,19 @@
             <app-tool-item [tools]="tool"></app-tool-item>
         </div>
     }
+</div> -->
+
+<div class="grid place-items-center space-x-4 pb-8">
+    <div class="rounded-full box-titles size-12 flex items-center justify-center mb-2">
+        <span class="material-symbols-outlined text-4xl text-fuchsia-100">
+            {{iconName()}}
+        </span>
+    </div>
+    <h3 class="text-xl">{{subsectionName()}}</h3> 
+    <!-- <hr class="flex-grow border-t-1 border-dashed border-fuchsia-200"/> -->
 </div>
+@for(tool of toolList(); track tool){
+    <div class="mb-2">
+        <app-tool-item [tools]="tool"></app-tool-item>
+    </div>
+}

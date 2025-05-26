@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 .box-titles{
-  background-color: #c05b87;
+  background-color: #e0707d;
 }
 
 .box-secondary{
@@ -14,6 +16,20 @@
 .box-dark-color{
   background-color: #b4537d;
 
+}
+
+.text-gradient{
+    background-image: linear-gradient(to right,#e0707d, #1b1a1a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.image-border{
+    border-color: #e08892;
+}
+
+.box-tools{
+  background-color: rgba(224, 112, 125, 0.2);
 }
 
  .background-pink-transparent{
@@ -34,14 +50,28 @@
   'opsz' 40
 }
 
-.raleway-regular, h3 {
+.geist-regular{
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geist-bold{
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.raleway-regular{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.raleway-bold {
+.raleway-bold, h3{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;

@@ -1,12 +1,42 @@
-<shared-titles [sectionTitle]="'Herramientas y Frameworks'"></shared-titles>
+<!-- <div id="frameworks" class="px-12">
 
-<app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+    <shared-titles [sectionTitle]="'Herramientas y Frameworks'"></shared-titles>
 
-<app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
+    <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+    
+    <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
+    
+    <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
+    
+    <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
+    
+    <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+</div> -->
 
-<app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
+<div id="frameworks" class="px-12">
 
-<app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
+    <shared-titles [sectionTitle]="'Herramientas y Frameworks'"></shared-titles>
 
-<app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+    <div class=" grid grid-cols-3 gap-10">
+        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
+            <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+        </div>
+        
+        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
+            <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
+        </div>
+        
+        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
+            <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
+        </div>
+        
+        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
+            <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
+        </div>
+        
+        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
+            <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+        </div>
+    </div>
 
+</div>

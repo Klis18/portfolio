@@ -1,4 +1,4 @@
-<div class="grid grid-cols-4 gap-5 bg-base-100 rounded-lg p-2 background-pink-transparent shadow-lg">
+<!-- <div class="grid grid-cols-4 gap-5 bg-base-100 rounded-lg p-2 background-pink-transparent shadow-lg">
     <div class="flex items-center justify-center">
         <img src="./assets/images/{{tools().image}}" alt="angular" class="w-32 rounded-full">
     </div>
@@ -8,5 +8,26 @@
                 <div class="h-4 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" [ngStyle]="{'width': tools().percentKnoledge}"></div>
         </div>
         <p>Nivel: {{tools().level}}</p>
+    </div>
+</div> -->
+
+<div class="grid grid-cols-4 gap-5 rounded-lg px-2">
+    <div class="flex items-center justify-center">
+        <img src="./assets/images/{{tools().image}}" alt="angular" class="w-10 rounded-full">
+    </div>
+    <div class="col-span-3 py-2">
+        <div class="mb-2">
+            <p class="text-left text-xl mr-2 poppins-regular">{{tools().tool}}</p>
+            <span class="poppins-light">Nivel: </span>
+            <span [ngClass]="{'bg-pink-700': tools().level === 'bajo',
+                            'bg-orange-500': tools().level === 'medio-bajo',
+                            'bg-violet-500': tools().level === 'medio',
+                            'bg-cyan-500': tools().level === 'medio-alto',
+                            'bg-lime-500': tools().level === 'alto'
+            }" class="px-2 py-1 rounded-3xl text-sm text-white poppins-light">{{tools().level}}</span>
+        </div>
+        <div class="w-full h-2 mb-2 progress-background rounded-full">
+                <div class="h-2 rounded-full bg-gradient-to-r from-rose-700 via-rose-500 to-rose-300" [ngStyle]="{'width': tools().percentKnoledge}"></div>
+        </div>
     </div>
 </div>
