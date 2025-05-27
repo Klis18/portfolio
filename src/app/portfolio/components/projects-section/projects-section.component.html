@@ -1,0 +1,13 @@
+<div id="projects" class="px-12 pt-14">
+    <shared-titles [sectionTitle]="'Proyectos'" #portfolio></shared-titles>
+    
+    @defer (on viewport(portfolio)) {
+        <div class="grid grid-cols-4 gap-10">
+            @for(project of projectList; track project){
+                <div>
+                    <app-projects-card [project]="project"></app-projects-card>
+                </div>
+            }
+        </div>
+    }
+</div>

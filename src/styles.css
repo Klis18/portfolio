@@ -36,6 +36,10 @@
       background-color: rgba(149, 85, 113, 0.2);
   }
 
+button{
+  background-color: #f4daad;
+  color: #1b1a1a;
+}
 
 .list-styles{
   list-style-type: square;

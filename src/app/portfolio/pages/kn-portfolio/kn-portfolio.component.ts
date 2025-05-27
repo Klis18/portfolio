@@ -5,17 +5,20 @@ import { HabilitiesSectionComponent } from "../../components/habilities-section/
 import { EducationSectionComponent } from "../../components/education-section/education-section.component";
 import { WorkExperienceSectionComponent } from "../../components/work-experience-section/work-experience-section.component";
 import { ContactSectionComponent } from "../../components/contact-section/contact-section.component";
+import { ProjectsSectionComponent } from "../../components/projects-section/projects-section.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-kn-portfolio',
   standalone: true,
   imports: [
-    NavbarComponent,
     AboutSectionComponent,
+    CommonModule,
     HabilitiesSectionComponent,
     EducationSectionComponent,
     WorkExperienceSectionComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    ProjectsSectionComponent
 ],
   templateUrl: './kn-portfolio.component.html',
   styleUrl: './kn-portfolio.component.css'

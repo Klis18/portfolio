@@ -15,28 +15,31 @@
 
 <div id="frameworks" class="px-12">
 
-    <shared-titles [sectionTitle]="'Herramientas y Frameworks'"></shared-titles>
+    <shared-titles [sectionTitle]="'Herramientas y Frameworks'" #tools></shared-titles>
 
-    <div class=" grid grid-cols-3 gap-10">
-        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
-            <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+    @defer (on viewport(tools)) {
+        <div class=" grid grid-cols-3 gap-10">
+            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
+                <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+            </div>
+            
+            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
+                <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
+            </div>
+            
+            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
+                <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
+            </div>
+            
+            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
+                <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
+            </div>
+            
+            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
+                <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+            </div>
         </div>
-        
-        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
-            <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
-        </div>
-        
-        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
-            <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
-        </div>
-        
-        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
-            <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
-        </div>
-        
-        <div class="box-tools rounded-lg shadow-lg shadow-zinc-500 p-4" >
-            <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
-        </div>
-    </div>
+    }
+
 
 </div>

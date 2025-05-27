@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about-section.component.html',
-  styles: ``
+  styles: `
+  `
 })
 export class AboutSectionComponent {
 
