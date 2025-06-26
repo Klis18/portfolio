@@ -8,6 +8,32 @@ export class ProjectsService {
 
   public projectsList: Project[] = [
     {
+      image: '/assets/images/logo-projects/swaglabs.jpg',
+      title: 'Swaglabs',
+      subtitle: '',
+      description: 'Automatización de casos de prueba en página Swaglabs',
+      tags: ['QA Automation', 'Selenium', 'Java'],
+      linkVideo: '',
+      linkApp: '',
+      linkBack: '',
+      linkFront: '',
+      linkUx: '',
+      state: ProjectState.Complete
+    },
+        {
+      image: '/assets/images/logo-projects/orangehrm.png',
+      title: 'Orange HRM',
+      subtitle: '',
+      description: 'Automatización de casos de prueba en página Orange HRM',
+      tags: ['QA Automation', 'Cypress', 'JavaScript'],
+      linkVideo: '',
+      linkApp: '',
+      linkBack: '',
+      linkFront: '',
+      linkUx: '',
+      state: ProjectState.Process
+    },
+    {
       image: '/assets/images/logo-projects/focusfly.png',
       title: 'FocusFly',
       subtitle: 'Aplicación de Gestión del tiempo para freelancers',

@@ -7,6 +7,7 @@ import { WorkExperienceSectionComponent } from "../../components/work-experience
 import { ContactSectionComponent } from "../../components/contact-section/contact-section.component";
 import { ProjectsSectionComponent } from "../../components/projects-section/projects-section.component";
 import { CommonModule } from '@angular/common';
+import { CoverSectionComponent } from "../../components/cover-section/cover-section.component";
 
 @Component({
   selector: 'app-kn-portfolio',
@@ -18,7 +19,8 @@ import { CommonModule } from '@angular/common';
     EducationSectionComponent,
     WorkExperienceSectionComponent,
     ContactSectionComponent,
-    ProjectsSectionComponent
+    ProjectsSectionComponent,
+    CoverSectionComponent
 ],
   templateUrl: './kn-portfolio.component.html',
   styleUrl: './kn-portfolio.component.css'
