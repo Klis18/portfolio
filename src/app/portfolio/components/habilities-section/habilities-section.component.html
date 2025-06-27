@@ -1,45 +1,35 @@
-<!-- <div id="frameworks" class="px-12">
-
-    <shared-titles [sectionTitle]="'Herramientas y Frameworks'"></shared-titles>
-
-    <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
-    
-    <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
-    
-    <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
-    
-    <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
-    
-    <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
-</div> -->
-
-<div id="frameworks" class="px-12">
-
-    <shared-titles [sectionTitle]="'Herramientas y Frameworks'" #tools></shared-titles>
-
-    @defer (on viewport(tools)) {
-        <div class=" grid grid-cols-3 gap-10">
-            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
-                <app-habilities-subsection [iconName]="'terminal'" [subsectionName]="'Lenguajes de Programación'" [toolList]="languageProgrammingList"/>
+<div class="w-full text-center custom-background2 h-full py-14 text-white">
+    <div class="px-2 md:px-8 lg:px-12 xl:px-12">
+        <span class="montserrat-alternates-bold text-3xl border-b-2 border-white">Habilidades y Herramientas</span>
+        <div class="glass-effect py-8 rounded-3xl mt-8">
+            <div class="pb-12 px-8 flex flex-wrap items-center justify-center gap-4">
+                <button class="p-2 rounded-3xl" (click)="filterTools('dev')">FullStack</button>
+                <button class="p-2 rounded-3xl" (click)="filterTools('qa')">QA</button>
+                <button class="p-2 rounded-3xl" (click)="filterTools('ux')">UX/UI</button>
+                <button class="p-2 rounded-3xl" (click)="filterTools('programming-language')">Lenguajes de Programación</button>
+                <button class="p-2 rounded-3xl" (click)="filterTools('others')">Otros</button>
+                <button class="p-2 rounded-3xl" (click)="filterTools('')">Todas</button>
             </div>
-            
-            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
-                <app-habilities-subsection [iconName]="'code'" [subsectionName]="'FullStack Development'" [toolList]="devToolsList"/>
-            </div>
-            
-            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
-                <app-habilities-subsection [iconName]="'bug_report'" [subsectionName]="'QA Testing'" [toolList]="qaToolsList"/>
-            </div>
-            
-            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
-                <app-habilities-subsection [iconName]="'brush'" [subsectionName]="'UX/UI Design'" [toolList]="uxToolsList"/>
-            </div>
-            
-            <div class="box-tools rounded-lg shadow-md shadow-zinc-500 p-4" >
-                <app-habilities-subsection [iconName]="'construction'" [subsectionName]="'Otras Herramientas'" [toolList]="othersTools"/>
+            <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-7">
+                @for(tool of toolsList; track tool){
+                    <div class=" rounded-md grid place-items-center">
+                        <div class="h-fit">
+                            <img src="./assets/images/{{tool.image}}" [alt]="tool.tool" class="rounded-xl size-16">
+                        </div>
+                        <div>
+                            <p class="mb-2 poppins-regular">{{tool.tool}}</p>
+                            <span class="rounded-md px-2 py-1 text-sm poppins-light" 
+                                    [ngClass]="{
+                                                'bg-violet-500': tool.level === 'intermedio',
+                                                'bg-cyan-500': tool.level === 'básico',
+                                                'bg-lime-500': tool.level === 'avanzado'
+                                            }">
+                                                {{tool.level | titlecase}}
+                            </span>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-    }
-
-
+    </div>
 </div>

@@ -19,7 +19,7 @@
 }
 
 .text-gradient{
-    background-image: linear-gradient(to right,#e0707d, #E09B70);
+    background-image: linear-gradient(to right,#e95062, #e2af90);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -37,8 +37,8 @@
   }
 
 button{
-  background-color: #f4daad;
-  color: #1b1a1a;
+  background-color: #f4ac44;
+  color: #2f1a30;
 }
 
 .list-styles{
@@ -319,6 +319,28 @@ button{
 
 .custom-secondary-color{
   background-color: #2f1a30;
+}
+
+.text-secondary-color{
+  color: #2f1a30;
+}
+
+.custom-terciary-color{
+  background-color: #793eae;
+}
+
+.custom-background2{
+    background: url('assets/images/purple-background.png') no-repeat center;
+      background-size: cover;
+
+}
+
+.custom-cuaternary-color{
+  background-color: #c93d5b;
+}
+
+img{
+  background-size: cover;
 }
 
 html, body { height: 100%; }

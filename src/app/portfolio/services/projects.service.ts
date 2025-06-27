@@ -8,10 +8,10 @@ export class ProjectsService {
 
   public projectsList: Project[] = [
     {
-      image: '/assets/images/logo-projects/swaglabs.jpg',
+      image: '/assets/images/logo-projects/p-swaglabs.png',
       title: 'Swaglabs',
-      subtitle: '',
-      description: 'Automatización de casos de prueba en página Swaglabs',
+      subtitle: 'Automatización de casos de prueba en página Swaglabs',
+      description: '',
       tags: ['QA Automation', 'Selenium', 'Java'],
       linkVideo: '',
       linkApp: '',
@@ -21,10 +21,10 @@ export class ProjectsService {
       state: ProjectState.Complete
     },
         {
-      image: '/assets/images/logo-projects/orangehrm.png',
+      image: '/assets/images/logo-projects/p-orangehrm.png',
       title: 'Orange HRM',
-      subtitle: '',
-      description: 'Automatización de casos de prueba en página Orange HRM',
+      subtitle: 'Automatización de casos de prueba en página Orange HRM',
+      description: '',
       tags: ['QA Automation', 'Cypress', 'JavaScript'],
       linkVideo: '',
       linkApp: '',
@@ -34,11 +34,11 @@ export class ProjectsService {
       state: ProjectState.Process
     },
     {
-      image: '/assets/images/logo-projects/focusfly.png',
+      image: '/assets/images/logo-projects/p-focusfly.png',
       title: 'FocusFly',
       subtitle: 'Aplicación de Gestión del tiempo para freelancers',
       description: '',
-      tags: ['Angular', '.Net'],
+      tags: ['Angular', '.Net', 'FullStack'],
       linkVideo: '',
       linkApp: '',
       linkBack: '',
@@ -47,11 +47,11 @@ export class ProjectsService {
       state: ProjectState.Process,
     },
     {
-      image: '/assets/images/logo-projects/smartrecall.png',
+      image: '/assets/images/logo-projects/p-smartrecall.png',
       title: 'SmartRecall',
       subtitle: 'Aplicación web para estudiar de manera inteligente.',
       description: '',
-      tags: ['Angular', '.Net'],
+      tags: ['Angular', '.Net', 'FullStack'],
       linkVideo: '',
       linkApp: '',
       linkBack: '',
@@ -60,11 +60,11 @@ export class ProjectsService {
       state: ProjectState.Pendiente
     },
     {
-      image: '/assets/images/logo-projects/shoppinglis.png',
+      image: '/assets/images/logo-projects/p-shoppinglis.png',
       title: 'ShoppingLis',
       subtitle: 'Ecommerce de ropa.',
       description: '',
-      tags: ['Angular', '.Net'],
+      tags: ['React', '.Net', 'FullStack'],
       linkVideo: '',
       linkApp: '',
       linkBack: '',
@@ -73,11 +73,11 @@ export class ProjectsService {
       state: ProjectState.Pendiente
     },
     {
-      image: '/assets/images/logo-projects/dolomedix.png',
+      image: '/assets/images/logo-projects/p-dolomedix.png',
       title: 'Dolomedix',
       subtitle: 'Aplicación de agendamiento de citas médicas.',
       description: '',
-      tags: ['Angular', '.Net'],
+      tags: ['React', '.Net', 'FullStack'],
       linkVideo: '',
       linkApp: '',
       linkBack: '',

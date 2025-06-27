@@ -10,129 +10,123 @@ export class AboutService {
   public toolsList: ToolHabilitie[] = [
     {
       tool: 'JavaScript',
-      percentKnoledge: '40%',
-      level: 'medio-bajo',
+      level: 'intermedio',
       type: 'programming-language',
       image: 'javascript.png'
     },
     {
       tool: 'Typescript',
-      percentKnoledge: '50%',
-      level: 'medio',
+      level: 'intermedio',
       type: 'programming-language',
       image: 'typescript.png'
     },
     {
       tool: 'C#',
-      percentKnoledge: '30%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'programming-language',
       image: 'csharp.png'
     },
     {
       tool: 'Angular',
-      percentKnoledge: '50%',
-      level: 'medio',
+      level: 'intermedio',
       type: 'dev',
       image: 'angular.jpg'
     },
     {
       tool: 'React',
-      percentKnoledge: '10%',
-      level: 'bajo',
+      level: 'básico',
       type: 'dev',
       image: 'react.png'
     },
     {
       tool: 'ASP.Net Core',
-      percentKnoledge: '30%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'dev',
       image: 'netcore.png'
     },
     {
       tool: 'Selenium',
-      percentKnoledge: '50%',
-      level: 'medio',
+      level: 'intermedio',
       type: 'qa',
       image: 'selenium.png'
     },
     {
       tool: 'Postman',
-      percentKnoledge: '70%',
-      level: 'medio-alto',
+      level: 'intermedio',
       type: 'qa',
       image: 'postman.png'
     },
     {
       tool: 'JMeter',
-      percentKnoledge: '25%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'qa',
       image: 'jmeter.jpg'
     },
     {
       tool: 'Cypress',
-      percentKnoledge: '25%',
-      level: 'medio-bajo',
+      level: 'intermedio',
       type: 'qa',
       image: 'cypress.jpg'
     },
     {
       tool: 'Cucumber',
-      percentKnoledge: '0%',
-      level: 'bajo',
+      level: 'básico',
       type: 'qa',
       image: 'cucumber.png'
     },
     {
       tool: 'Figma',
-      percentKnoledge: '70%',
-      level: 'medio-alto',
+      level: 'intermedio',
       type: 'ux',
       image: 'figma.png'
     },
     {
       tool: 'Adobe XD',
-      percentKnoledge: '30%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'ux',
       image: 'adobexd.png'
     },
     {
       tool: 'Maze',
-      percentKnoledge: '30%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'ux',
       image: 'maze.jpg'
     },
     {
       tool: 'Notion',
-      percentKnoledge: '90%',
-      level: 'medio-alto',
+      level: 'intermedio',
       type: 'others',
       image: 'notion.png'
     },
     {
       tool: 'Trello',
-      percentKnoledge: '70%',
-      level: 'medio-alto',
+      level: 'avanzado',
       type: 'others',
       image: 'trello.jpg'
     },
     {
       tool: 'Github',
-      percentKnoledge: '30%',
-      level: 'medio-bajo',
+      level: 'básico',
       type: 'others',
       image: 'github.png'
     },
     {
       tool: 'Canva',
-      percentKnoledge: '80%',
-      level: 'medio-alto',
+      level: 'avanzado',
       type: 'others',
       image: 'canva.jpg'
+    },
+    {
+      tool:'Jira',
+      level:'básico',
+      type:'others',
+      image:'jira.png'
+    },
+    {
+      tool: 'K6',
+      level: 'básico',
+      type: 'others',
+      image: 'k6.png'
     }
   ]
 
@@ -151,7 +145,10 @@ export class AboutService {
   constructor() { }
 
   getToolFilterList(filter: string): ToolHabilitie[]{
-    return this.toolsList.filter(x => x.type == filter);
+    if(filter){
+      return this.toolsList.filter(x => x.type == filter);
+    }
+    return this.toolsList;
   }
 
   getWorkExperience(): WorkExperience[]{
