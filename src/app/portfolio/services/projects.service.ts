@@ -91,4 +91,11 @@ export class ProjectsService {
   getProjectsList(){
     return this.projectsList;
   }
+
+  getProjectsFiltered(filter:string){
+    if(filter){
+      return this.projectsList.filter(projects => projects.tags.includes(filter));
+    }
+      return this.projectsList;
+  }
 }

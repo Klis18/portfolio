@@ -1,7 +1,7 @@
-<div id="experience" class="px-12">
-    <shared-titles [sectionTitle]="'Experiencia Laboral'"/>
+<div id="experience" class="px-12 py-14 custom-terciary-color text-center">
+    <span class="montserrat-alternates-bold text-3xl text-white border-b-2 border-white">Experiencia Laboral</span>
     
-    <div class="grid grid-cols-2 gap-5 md:gap-12 lg:gap-12 xl:gap-12 h-1/3 mb-12">
+    <div class="grid grid-cols-2 gap-5 md:gap-12 lg:gap-12 xl:gap-12 h-1/3 mt-12 mb-4">
         @for(workExperience of workExperienceList; track workExperience){
             <div class="col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1">
                     <portfolio-work-card [workExperience]="workExperience"></portfolio-work-card>

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'portfolio-projects-section',
   standalone: true,
-  imports: [CommonModule,TitlesComponent, ProjectsCardComponent],
+  imports: [CommonModule, ProjectsCardComponent],
   templateUrl: './projects-section.component.html',
   styles: ``
 })
@@ -19,18 +19,15 @@ export class ProjectsSectionComponent implements OnInit{
   constructor(private projectsService: ProjectsService){}
 
   ngOnInit(): void {
-    this.projectList = this.projectsService.getProjectsList();
+    this.filterProjects('');
+    this.startAutoScroll();
   }
 
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
 
-  cards = [
-    { title: 'Card 1', content: 'Contenido de la tarjeta 1' },
-    { title: 'Card 2', content: 'Contenido de la tarjeta 2' },
-    { title: 'Card 3', content: 'Contenido de la tarjeta 3' },
-    { title: 'Card 4', content: 'Contenido de la tarjeta 4' },
-    { title: 'Card 5', content: 'Contenido de la tarjeta 5' },
-  ];
+  filterProjects(filter:string){
+    this.projectList = this.projectsService.getProjectsFiltered(filter);
+  }
 
   scrollLeft() {
     this.scrollContainer.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
@@ -38,5 +35,18 @@ export class ProjectsSectionComponent implements OnInit{
 
   scrollRight() {
     this.scrollContainer.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+
+  startAutoScroll() {
+      setInterval(() => {
+        const container = this.scrollContainer.nativeElement;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        if (container.scrollLeft >= maxScrollLeft) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+      }, 3000);
   }
 }

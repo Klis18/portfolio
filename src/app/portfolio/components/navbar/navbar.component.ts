@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit{
    }
 
    scrollTo(sectionId: string, event: Event) {
-    event.preventDefault(); // para que no navegue con el href "#"
+    event.preventDefault();
 
     const element = document.getElementById(sectionId);
     if (element) {

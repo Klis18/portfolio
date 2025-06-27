@@ -1,53 +1,41 @@
 <div id="projects" class="px-12 pt-14 custom-cuaternary-color text-center h-full py-14" #portfolio>
-    <span class="montserrat-alternates-bold text-3xl border-b-2 border-white">Proyectos</span>
+    <span class="montserrat-alternates-bold text-3xl text-white border-b-2 border-white">Proyectos</span>
 
     <div class="py-8">
         <div class="pb-8 px-8 flex items-center justify-center gap-4">
-                    <button class="p-2 rounded-3xl">FullStack</button>
-                    <button class="p-2 rounded-3xl">QA</button>
-        
+                    <button class="p-2 rounded-3xl" (click)="filterProjects('FullStack')">FullStack</button>
+                    <button class="p-2 rounded-3xl" (click)="filterProjects('QA Automation')">QA</button>
+                    <button class="p-2 rounded-3xl" (click)="filterProjects('')">Todos</button>
         </div>
-        <div>
-            <div class="relative w-full">
-  <!-- Botón Izquierdo -->
-  <button
-    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 shadow"
-    (click)="scrollLeft()"
-  >
-    ‹
-  </button>
+      <div>
+          <div class="relative w-full">
+            <!-- Botón Izquierdo -->
+            <button
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 shadow"
+              (click)="scrollLeft()"
+            >
+              ‹
+            </button>
 
-  <!-- Contenedor del slider -->
-  <div
-    #scrollContainer
-    class="flex space-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 py-4"
-    style="scrollbar-width: none;"
-  >
-            @for(project of projectList; track project){
-                <div class="min-w-[200px] snap-start bg-white shadow-lg rounded-lg flex-shrink-0">
-                    <app-projects-card [project]="project"></app-projects-card>
-                </div>
-            }
+            <div
+              #scrollContainer
+              class="flex space-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 py-4"
+              style="scrollbar-width: none;"
+            >
+                      @for(project of projectList; track project){
+                          <div class="min-w-[200px] snap-start bg-white shadow-lg rounded-lg flex-shrink-0">
+                              <app-projects-card [project]="project"></app-projects-card>
+                          </div>
+                      }
+            </div>
+
+            <button
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 shadow"
+              (click)="scrollRight()"
+            >
+              ›
+            </button>
+          </div>
+      </div>
   </div>
-
-  <!-- Botón Derecho -->
-  <button
-    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 shadow"
-    (click)="scrollRight()"
-  >
-    ›
-  </button>
-</div>
-
-        </div>
-    </div>
-    <!-- @defer (on viewport(portfolio)) {
-        <div class="grid grid-cols-4 gap-10">
-            @for(project of projectList; track project){
-                <div>
-                    <app-projects-card [project]="project"></app-projects-card>
-                </div>
-            }
-        </div>
-    } -->
 </div>
